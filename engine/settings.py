@@ -25,7 +25,7 @@ SECRET_KEY = '^d65l+m=3j2q7&w*wn88*&3!jmi&1xaoz@fuh4et8&gg5#u$%q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['engie.pythonanywhere.com']
 
 
 # Application definition
