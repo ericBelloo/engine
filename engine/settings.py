@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^d65l+m=3j2q7&w*wn88*&3!jmi&1xaoz@fuh4et8&gg5#u$%q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['engie.pythonanywhere.com']
 
@@ -124,10 +124,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, "static"),
+#    '/var/www/static/',
+#]
 
 MEDIA_URL = '/upload/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'upload')
