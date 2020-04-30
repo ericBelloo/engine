@@ -1,0 +1,109 @@
+
+{% extends 'base.html' %}
+
+{% block section %}
+
+<div class="container">
+    <div class="row df aic ">
+        <div class="col-sm-12 col-md-12 col-lg-12 df aic">
+            <span class="title">{{ person.company.business_name }}</span>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 df aic jcc">
+            <div class="img-content">
+                <i class="fa fa-file-photo-o fa-5x"></i>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 df aic jcc">
+            <span>Selecciona el archivo que deseas descargar</span>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 df aic jcc row">
+            <div class="col-xs-2 col-md-4 col-lg-4">
+                <a href="/upload/nda/cmg.pdf"><button class="btn-nda">CMG - Estado de México <i class="fa fa-download"></i></button></a>
+            </div>
+            <div class="col-xs-2 col-md-4 col-lg-4">
+                <a href="/upload/nda/dgj.pdf"><button class="btn-nda">DGJ - Guadalajara <i class="fa fa-download"></i></button></a>
+            </div>
+            <div class="col-xs-2 col-md-4 col-lg-4">
+                <a href="/upload/nda/gnp.pdf"><button class="btn-nda">GNP - Tampico <i class="fa fa-download"></i></button></a>
+            </div>
+            <div class="col-xs-2 col-md-4 col-lg-4">
+                <a href="/upload/nda/dgq.pdf"><button class="btn-nda">DGQ - Querétaro <i class="fa fa-download"></i></button></a>
+            </div>
+            <div class="col-xs-2 col-md-4 col-lg-4">
+                <a href="/upload/nda/tmg.pdf"><button class="btn-nda">TMG - Matamoros <i class="fa fa-download"></i></button></a>
+            </div>
+            <div class="col-xs-2 col-md-4 col-lg-4">
+                <a href="/upload/nda/ngm.pdf"><button class="btn-nda">NGM - Puebla <i class="fa fa-download"></i></button></a>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 df aic jcc">
+                <span>Agrega los archivos que desea subir </span>
+            </div>
+            <div class="col-xs-12 col-md-8 col-lg-5 df aic jcc row">
+                <form method="post" enctype="multipart/form-data"  class="form-home" id="form_home">{% csrf_token %}
+                    <div class="row">
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            {{ form.cmg }}
+                            <div class="doc-content">
+                                <label id="lb_cmg" for="{{ form.cmg.id_for_label }}">
+                                    <i class="fa fa-file-pdf-o fa-3x" id="doc_cmg"></i>
+                                </label>
+                                <span>CMG</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <div class="doc-content">
+                                {{ form.dgj }}
+                                <label id="lb_dgj" for="{{ form.dgj.id_for_label }}" >
+                                    <i class="fa fa-file-pdf-o fa-3x" id="doc_dgj"></i>
+                                </label>
+                                <span>DGJ</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <div class="doc-content">
+                                {{ form.gnp }}
+                                <label id="lb_gnp" for="{{ form.gnp.id_for_label }}" >
+                                    <i class="fa fa-file-pdf-o fa-3x" id="doc_gnp"></i>
+                                </label>
+                                <span>GNP</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-md-4 col-lg-4">
+                            <div class="doc-content">
+                                {{ form.dgq }}
+                                <label id="lb_dgq" for="{{ form.dgq.id_for_label }}" >
+                                    <i class="fa fa-file-pdf-o fa-3x" id="doc_dgq"></i>
+                                </label>
+                                <span>DGQ</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-md-4 col-lg-4s">
+                            <div class="doc-content">
+                                {{ form.tmg }}
+                                <label id="lb_tmg" for="{{ form.tmg.id_for_label }}" >
+                                    <i class="fa fa-file-pdf-o fa-3x" id="doc_tmg"></i>
+                                </label>
+                                <span>TMG</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-md-4 col-lg-4s">
+                            <div class="doc-content">
+                                {{ form.ngm }}
+                                <label id="lb_ngm" for="{{ form.ngm.id_for_label }}" >
+                                    <i class="fa fa-file-pdf-o fa-3x" id="doc_ngm"></i>
+                                </label>
+                                <span>NGM</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="align-self-center df aic jcc">
+                            <button type="submit" class="btn-complete">Guardar</button>
+                        </div>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

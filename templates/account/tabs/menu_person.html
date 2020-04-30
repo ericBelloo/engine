@@ -1,0 +1,60 @@
+
+<div id="menu_person" style="display:block">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="box">
+                <div class="form-account">
+                    <div class="col-sm-12 col-md-12 col-lg-12" >
+                        <div style="margin:10px;">
+                            <span class="form-title">Datos del Represente Legal</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        {{ personForm.name }}
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6" >
+                        {{ personForm.last_name }}
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        {{ personForm.second_last_name }}
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        {{ personForm.email }}
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        {{ personForm.telephone_number }}
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        {{ personForm.phone_number }}
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        {{ personForm.rfc }}
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <div class="doc-content">
+                            {{ personDocumentForm.power_letter }}
+                            <label id="lb_power_latter" for="{{ personDocumentForm.power_letter.id_for_label }}">
+                                <i class="fa fa-file-pdf-o fa-3x" id="doc_power_letter"></i>
+                            </label>
+                            <span>Carta Poder</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <div class="doc-content">
+                            {{ personDocumentForm.ine }}
+                            <label id="lb_ine" for="{{ personDocumentForm.ine.id_for_label }}">
+                                <i class="fa fa-file-pdf-o fa-3x" id="doc_ine"></i>
+                            </label>
+                            <span>INE</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="align-self-center df aic jcc">
+                            <button type="button" class="btn-complete" name="person">Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

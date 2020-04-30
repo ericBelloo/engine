@@ -1,0 +1,98 @@
+
+<div id="menu_company" style="display:none">
+    <div class="row">
+        <div class="col-sm-12 col-md-12- col-lg-12">
+            <div class="box">
+                <div class="form-account">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div style="margin:10px;">
+                            <span class="form-title">Datos Generales</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        {{ companyForm.name }}
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        {{ companyForm.business_name }}
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        {{ companyForm.rfc }}
+                    </div>
+                    <div class="col-sm-4 col-m-4 col-lg-4">
+                        <div class="doc-content">
+                            {{ CompanyDocumentForm.constitutive_act }}
+                            <label id="lb_constitutive_act" for="{{ CompanyDocumentForm.constitutive_act.id_for_label }}" >
+                                <i class="fa fa-file-pdf-o fa-3x" id="doc_constitutive_act"></i>
+                            </label>
+                            <span>Acta constitutiva</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-m-4 col-lg-4">
+                        <div class="doc-content">
+                            {{ CompanyDocumentForm.estate }}
+                            <label id="lb_estate" for="{{ CompanyDocumentForm.estate.id_for_label }}">
+                                <i class="fa fa-file-pdf-o fa-3x" id="doc_estate"></i>
+                            </label>
+                            <span>Hacienda</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-m-4 col-lg-4">
+                        <div class="doc-content">
+                            {{ CompanyDocumentForm.tax_certificate }}
+                            <label id="lb_tax_certificate" for="{{ CompanyDocumentForm.tax_certificate.id_for_label }}">
+                                <i class="fa fa-file-pdf-o fa-3x" id="doc_tax_certificate"></i>
+                            </label>
+                            <span>Cedula Fiscal</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-m-4 col-lg-4">
+                        <div class="doc-content">
+                            {{ CompanyDocumentForm.proof_of_address }}
+                            <label id="lb_proof_of_address" for="{{ CompanyDocumentForm.proof_of_address.id_for_label }}">
+                                <i class="fa fa-file-pdf-o fa-3x" id="doc_proof_of_address"></i>
+                            </label>
+                            <span>Comprobante de Direccion</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-m-4 col-lg-4">
+                        <div class="doc-content">
+                            {{ CompanyDocumentForm.bank_account }}
+                            <label id="lb_bank_account" for="{{ CompanyDocumentForm.bank_account.id_for_label }}">
+                                <i class="fa fa-file-pdf-o fa-3x" id="doc_bank_account"></i>
+                            </label>
+                            <span>Cuenta de banco</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-m-4 col-lg-4">
+                        <div class="doc-content">
+                            {{ CompanyDocumentForm.sat }}
+                            <label id="lb_sat" for="{{ CompanyDocumentForm.sat.id_for_label }}">
+                                <i class="fa fa-file-pdf-o fa-3x" id="doc_sat"></i>
+                            </label>
+                            <span>SAT</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-m-12 col-lg-12">
+                        <div class="doc-content">
+                            {{ CompanyDocumentForm.employer_registration }}
+                            <label id="lb_employer_registration" for="{{ CompanyDocumentForm.employer_registration.id_for_label }}">
+                                <i class="fa fa-file-pdf-o fa-3x" id="doc_employer_registration"></i>
+                            </label>
+                            <span>Registro Patronal</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <div class="align-self-center df aic jcc">
+                            <button type="submit" class="btn-complete" name="company_back">Anterior</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <div class="align-self-center df aic jcc">
+                            <button type="submit" class="btn-complete" name="company">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+
+{% block section %}
+
+<div class="container">
+    <div class="row df aic clm">
+        <div class="col-sm-12 col-md-8 col-lg-5 df aic">
+            <span class="title">Registro</span>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-5">
+            <form method="post" enctype="multipart/form-data" id="form_account">{% csrf_token %}
+                {% include 'account/tabs/menu_person.html' %}
+                {% include 'account/tabs/menu_company_direction.html' %}
+                {% include 'account/tabs/menu_company.html' %}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

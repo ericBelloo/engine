@@ -1,0 +1,245 @@
+
+@import 'scss/utils';
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Lobster+Two:wght@700&display=swap');
+
+$base-gray-color: rgb( 213, 216, 220 );
+$base-white-color: rgb( 253, 254, 254 );
+$base-blue-color: #19a6ef;
+$base-black-color: rgb(86, 101, 115);
+$base-green-color: #4CAF50;
+
+.df{
+    display: flex;
+}
+
+.aic{
+    align-items: center;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.clm{
+    flex-direction: column;
+}
+
+.row-r{
+    flex-direction: row-reverse;
+}
+
+.fwrap{
+    flex-wrap: wrap;
+}
+
+.jcc{
+    justify-content: center;
+}
+
+.jce{
+    justify-content: flex-end;
+}
+
+.jcs{
+    justify-content: flex-start;
+}
+
+body{
+   @include size(100%, auto);
+   @extend .aic, .jcc;
+   margin: 0px;
+   background-color: $base-white-color;
+}
+
+header{
+    @include size(100%, 60px);
+    @extend .df, .aic, .jce;
+    top: 0px;
+    background-color: black;
+}
+
+.header-content{
+    @include size(100%, 60px);
+    @extend .df, .aic, .jce;
+    span{
+        color: white;
+        margin: 0px 20px;
+        font-family: 'Lobster Two', cursive;
+        font-family: 'Handlee', cursive;
+        font-size: 2em;
+    }
+    img{
+        @include size(120px, 50px);
+        margin: 0px 15px;
+    }
+}
+
+footer{
+    @include size(100%, 30px);
+    @extend .df, .aic;
+    background-color: $base-gray-color;
+    position: fixed;
+    bottom: 0px;
+    span{
+        padding: 0px 20px;
+        color: $base-black-color;
+        font-family: Arial;
+    }
+}
+
+section{
+    @include size(100%, auto);
+    @extend .df, .aic, .jcc, .clm;
+}
+
+.vertical-menu {
+  width: 300px;
+  padding: 0px;
+  background-color: $base-white-color;
+  border: 1px solid $base-gray-color;
+  border-radius: 20px;
+  li{
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    list-style:none;
+
+    &:last-child{
+        border-radius: 0px 0px 20px 20px;
+    }
+    &:first-child{
+        border-radius: 20px 20px 0px 0px;
+    }
+    a{
+        outline: 0px;
+        text-decoration: none;
+        font-family: Arial;
+        color: $base-black-color;
+    }
+  }
+}
+
+li.active {
+    background-color: $base-blue-color;
+    border-color: $base-blue-color;
+    a{
+        color: $base-white-color !important;
+    }
+}
+
+
+.box{
+    margin: 5px;
+    padding: 20px;
+    background-color: $base-white-color;
+    border: 1px solid $base-gray-color;
+    border-radius: 20px;
+}
+
+.title{
+    font-family: Arial;
+    font-size: 2em;
+    color: $base-black-color;;
+    margin: 10px;
+}
+
+.form-title{
+    font-family: Arial;
+    font-size: 1em;
+    color: $base-black-color;;
+    margin: 10px;
+}
+
+.form-account{
+    @include size(100%, auto);
+    @extend .df, .aic, .row, .jcs, .fwrap;
+    input[type='text']{
+        @include size(100%, auto);
+        padding: 5px 10px;
+        margin: 5px;
+        background-color: $base-white-color;
+        border: 1px solid $base-gray-color;
+        border-radius: 20px;
+        font-family: Arial;
+        font-size: 1em;
+    }
+    select{
+        @include size(100%, auto);
+        padding: 5px 10px;
+        margin: 5px;
+        background-color: $base-white-color;
+        border: 1px solid $base-gray-color;
+        border-radius: 20px;
+        font-family: Arial;
+        font-size: 1em;
+    }
+    input[type='file']{
+       display: none;
+    }
+}
+
+.form-home{
+    input[type='file']{
+        display: none;
+    }
+}
+
+.btn-complete{
+    @include size(90%, 35px);
+    background-color: $base-blue-color;
+    border: 0px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 1em;
+    color: white;
+}
+
+.btn-nda{
+    @include size(90%, 35px);
+    background-color: $base-green-color;
+    border: 0px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 1em;
+    color: white;
+}
+
+.doc-content{
+    @include size(100%, 100%);
+    @extend .df, .aic, .jcc, .clm;
+    margin: 10px;
+    label{
+        margin: 2px;
+        font-family: Arial;
+        font-size: 1em;
+        color: $base-black-color;
+        text-align: center;
+    }
+    span{
+        font-family: Arial;
+        color: $base-black-color;
+        font-size: 0.7em;
+    }
+}
+
+
+.menu{
+    position: relative;
+}
+
+.sub-menu{
+    position:absolute;
+}
+
+.img-content{
+    @include size(120px, 120px);
+    @extend .df, .aic, .jcc;
+    border: 3px solid $base-black-color;
+    border-radius: 50%;
+    margin: 15px;
+    i{
+        color: $base-black-color;
+    }
+}
