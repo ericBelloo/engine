@@ -1,44 +1,28 @@
 
-<div id="menu_company_direction" style="display:none">
-    <div class="row">
-        <div class="col-sm-12 col-md-12- col-lg-12">
-            <div class="box">
-                <div class="form-account">
-                    <div class="col-sm-12 col-md-12 col-lg-12" >
-                        <div style="margin:10px;">
-                            <span class="form-title">Dirección de la Empresa</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        {{ companyAddressForm.cp }}
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input type="text" placeholder="Estado" id="id_state" disabled>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input type="text" placeholder="Delegación/Municipio" id="id_city" disabled>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        {{ companyAddressForm.colony }}
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        {{ companyAddressForm.street_a }}
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        {{ companyAddressForm.number }}
-                    </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="align-self-center df aic jcc">
-                                <button type="button" class="btn-complete" name="company_direction-back">Anterior</button>
+<div class="row form-row valid-form" style="display: none;" id="section_direction">
+                            <h5>Dirección de la Empresa</h5>
+                            <div class="col-xs-12 col-md-12 col-lg-12 mb-3">
+                                <input type="text" class="form-control" id=""  placeholder="CP">
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-lg-12 mb-3">
+                                <input type="text" class="form-control" id=""  placeholder="Estado">
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-lg-12 mb-3">
+                                <input type="text" class="form-control" id=""  placeholder="Delegacion/Municipio">
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-lg-12 mb-3">
+                                <input type="text" class="form-control" id=""  placeholder="Colonia">
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-lg-12 mb-3">
+                                <input type="text" class="form-control" id=""  placeholder="Calle">
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-lg-12 mb-3">
+                                <input type="text" class="form-control" id=""  placeholder="Numero Exterior">
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mb-3">
+                                <button type="button" class="btn-back btn-sign-up" data-section="direction">Regresar</button>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mb-3">
+                                <button type="button" class="btn-send" data-section="direction">Send</button>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="align-self-center df aic jcc">
-                                <button type="button" class="btn-complete" name="company_direction">Siguiente</button>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

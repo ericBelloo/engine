@@ -2,19 +2,21 @@
 {% extends 'base.html' %}
 
 {% block section %}
-
-<div class="container">
-    <div class="row df aic clm">
-        <div class="col-sm-12 col-md-8 col-lg-5 df aic">
-            <span class="title">Registro</span>
+<section class="section-sign-up">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-xs-12 col-sm-10 col-md-5 col-lg-4 ">
+                    <h1 class="text-center">Sign Up</h1>
+                    <form class="mt-3" method="POST" action="#" id="form_sign_up">
+                        <!-- Personal Data -->
+                        {% include 'account/tabs/menu_person.html' %}
+                        <!--Company Data-->
+                        {% include 'account/tabs/menu_company.html' %}
+                        <!--Company Direccion -->
+                        {% include 'account/tabs/menu_company_direction.html' %}
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-12 col-md-8 col-lg-5">
-            <form method="post" enctype="multipart/form-data" id="form_account">{% csrf_token %}
-                {% include 'account/tabs/menu_person.html' %}
-                {% include 'account/tabs/menu_company_direction.html' %}
-                {% include 'account/tabs/menu_company.html' %}
-            </form>
-        </div>
-    </div>
-</div>
+    </section>
 {% endblock %}
