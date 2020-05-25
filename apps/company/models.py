@@ -13,7 +13,7 @@ class Document(models.Model):
 
 
 class Company(BaseNameModel):
-    business_name = models.CharField(max_length=100)  #razon social
+    business_name = models.CharField(max_length=100, null=True, blank=True)  # razon social
     rfc = models.CharField(max_length=50)
     address = models.ForeignKey(Address, blank=True, null=True, on_delete=models.CASCADE)  # direccion
     document = models.ForeignKey(Document, blank=True, null=True, on_delete=models.CASCADE)  # documentos

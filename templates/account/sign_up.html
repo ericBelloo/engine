@@ -7,13 +7,16 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-xs-12 col-sm-10 col-md-5 col-lg-4 ">
                     <h1 class="text-center">Sign Up</h1>
-                    <form class="mt-3" method="POST" action="#" id="form_sign_up">
+                    <form class="mt-3" method="POST" action="#" id="form_sign_up"> {% csrf_token %}
                         <!-- Personal Data -->
                         {% include 'account/tabs/menu_person.html' %}
                         <!--Company Data-->
                         {% include 'account/tabs/menu_company.html' %}
                         <!--Company Direccion -->
                         {% include 'account/tabs/menu_company_direction.html' %}
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-3 text-center">
+                            <a class="reference" href="{% url 'person:login' %}">Ya tengo cuenta</a>
+                        </div>
                     </form>
                 </div>
             </div>

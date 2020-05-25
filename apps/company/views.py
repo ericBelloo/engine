@@ -66,3 +66,4 @@ class CompanyHomeView(FormView):
         if 'pk' in self.request.session:
             context['person'] = Person.objects.get(id=self.request.session['pk'])
         return context
+

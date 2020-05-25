@@ -24,14 +24,18 @@ class City(BaseNameModel):
     state = models.ForeignKey(State, blank=True, null=True, on_delete=models.SET_NULL)
 
 
+class Colony(BaseNameModel):
+    """ Colonia """
+    city = models.ForeignKey(City, blank=True, null=True, on_delete=models.SET_NULL)
+
+
 class CP(models.Model):
     cp = models.CharField(max_length=5, primary_key=True)
-    city = models.ForeignKey(City, blank=True, null=True, on_delete=models.SET_NULL)
+    colony = models.ForeignKey(Colony, blank=True, null=True, on_delete=models.SET_NULL)
 
 
 class Address(models.Model):
     street_a = models.CharField(max_length=100)  # calle
     street_b = models.CharField(max_length=100, null=True, blank=True)  # colonia
     number = models.CharField(max_length=3, null=True, blank=True)
-    colony = models.CharField(max_length=50, blank=True, null=True)
     cp = models.CharField(max_length=5)  # codigo postal

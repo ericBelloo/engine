@@ -1,47 +1,34 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <link rel="stylesheet" type="text/css" href="bundle.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-</head>
-<body>
-    <header></header>
+{% extends 'base.html' %}
+
+{% block section %}
     <section class="section-login">
         <div class="container-fluid">
             <div class="row justify-content-center align-items-center">
                 <div class="col-xs-12 col-sm-10 col-md-5 col-lg-4 ">
                     <h1 class="text-center">Login</h1>
-                    <form class="valid-form mt-3" method="POST" action="#">
+                    <form class="valid-form mt-3" method="POST">
+                    {% csrf_token %}
                       <div class="row form-row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-3">
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                          {{ form.username }}
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-3">
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          {{ form.password }}
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mb-3">
-                          <button type="submit" class="btn-send val-sub">Submit</button>
+                          <button type="submit" class="btn-send val-sub">Enviar</button>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mb-3">
-                          <button type="button" class="btn-sign-up">Sign up</button>
+                          <button type="button" class="btn-sign-up">Crear Cuenta</button>
                         </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-3 text-center">
+                        <a class="reference" href="#">Olvide mi contraseña</a>
                       </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <footer>
-    </footer>
-    <script src="bundle.js"></script>
-    <script
-        src="https://code.jquery.com/jquery-3.1.0.js"
-        integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
-        crossorigin="anonymous">
-    </script>
-</body>
-</html>
+{% endblock %}
