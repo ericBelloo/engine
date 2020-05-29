@@ -1,5 +1,5 @@
 from django.db import models
-from apps.utils.models import BaseNameModel, Address
+from apps.utils.models_direction import BaseNameModel, Address
 
 
 class Document(models.Model):

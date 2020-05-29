@@ -1,7 +1,7 @@
 
 from django import forms
 from apps.company.models import Company, Document, CompanyNDA
-from apps.utils.models import Address, State
+from apps.utils.models_direction import Address
 
 
 class CompanyForm(forms.ModelForm):
@@ -30,27 +30,28 @@ class CompanyForm(forms.ModelForm):
 
 class CompanyAddressForm(forms.ModelForm):
     """ Formulario para la direccion de la empresa """
-
-    state = forms.CharField(widget=forms.TextInput(
-        attrs={'placeholder': 'Estado',
-               'class': 'form-control'}), label='')
-    city = forms.CharField(widget=forms.TextInput(
-        attrs={'placeholder': 'Municipio',
+    cp = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'CP',
                'class': 'form-control'}
     ), label='')
-    colony = forms.CharField(widget=forms.TextInput(
-        attrs={'placeholder': 'Colonia',
-               'class': 'form-control'}
+    state = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'Estado',
+               'class': 'form-control',
+               'disabled': True}
+    ), label='')
+    city = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'Municipio',
+               'class': 'form-control',
+               'disabled': True}
     ), label='')
 
     class Meta:
         model = Address
-        fields = ('street_a', 'street_b', 'cp', 'number')
+        fields = ('street_a', 'street_b', 'colony', 'number')
         widgets = {
-            'cp': forms.TextInput(
+            'colony': forms.Select(
                 attrs={
-                    'placeholder': 'Codigo Postal',
-                    'class': 'form-control'
+                    'class': 'browser-default custom-select'
                 }),
             'street_a': forms.TextInput(
                 attrs={
@@ -71,7 +72,7 @@ class CompanyAddressForm(forms.ModelForm):
         labels = {
             'street_a': '',
             'street_b': '',
-            'cp': '',
+            'colony': '',
         }
 
 

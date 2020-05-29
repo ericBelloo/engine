@@ -1,7 +1,7 @@
 import pyexcel
 from django.http import HttpResponse
-from django.shortcuts import render
-from apps.utils.models import State, City, CP
+from apps.utils.models_direction import State, City, CP, Colony
+from engine import settings
 
 
 def process_state(request):
@@ -46,6 +46,7 @@ def process_city(request):
 
             obj, created = City.objects.get_or_create(
                 name=item['city'].upper(),
+                cp=item['cp'],
                 state=state,
             )
         except Exception as err:
@@ -56,19 +57,24 @@ def process_city(request):
     return HttpResponse('Se crearon: %s' % count_created )
 
 
-def process_cp(request):
+def process_colony(request):
+    """
+    Function to upload catalog Periodo to the database
+    :param request:
+    :return: umber of records crated in Period table
+    """
+    count_created = 0
     try:
-        records = pyexcel.iget_records(file_name='static/files/cp.xlsx')
+        records = pyexcel.iget_records(file_name='static/files/colony.xlsx')
     except Exception as err:
         return err
-    count_created = 0
+
     for item in records:
         try:
-
             city = City.objects.get(id=item['city'])
 
-            obj, created = CP.objects.update_or_create(
-                cp=item['cp'],
+            obj, created = Colony.objects.get_or_create(
+                name=item['colony'].upper(),
                 city=city,
             )
         except Exception as err:
