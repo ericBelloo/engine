@@ -84,11 +84,11 @@ class PersonForm(forms.ModelForm):
         widgets = {
             'telephone_number': forms.TextInput(
                 attrs={'placeholder': 'Num. Telefono',
-                       'class': 'form-control'
+                       'class': 'form-control only-numbers'
                        }),
             'phone_number': forms.TextInput(
                 attrs={'placeholder': 'Num. Celular',
-                       'class': 'form-control'
+                       'class': 'form-control only-numbers'
                        }),
             'rfc': forms.TextInput(
                 attrs={'placeholder': 'R.F.C',
