@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^d65l+m=3j2q7&w*wn88*&3!jmi&1xaoz@fuh4et8&gg5#u$%q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'engie.pythonanywhere.com', 'engiee01.pythonanywhere.com']
 
