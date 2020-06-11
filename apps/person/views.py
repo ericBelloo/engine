@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login
 
 # Create your views here.
 from django.views import View
-from django.views.generic import FormView, CreateView
+from django.views.generic import TemplateView, CreateView
 
 from apps.company.forms import CompanyForm, CompanyAddressForm, CompanyDocumentForm, CompanyNDAForm
 from apps.person.forms import UserLoginForm, PersonForm, PersonDocumentForm, UserForm
@@ -70,10 +70,14 @@ class PersonSignUpView(View):
             request.session['pk'] = person.id  # inicia la seccion del usuario
         else:
             messages.error(request, 'Error al guardar los datos de la compañia')
-            return HttpResponseRedirect(reverse('company:account_company'))
+            return HttpResponseRedirect(reverse('person:sign_up'))
         return HttpResponseRedirect(reverse('person:home'))
 
 
-class PersonHomeView(CreateView):
+class PersonHomeView(TemplateView):
     template_name = 'profile/home.html'
-    form_class = CompanyNDAForm
+
+    def get_context_data(self, **kwargs):
+        context = super(PersonHomeView, self).get_context_data()
+        return context
+

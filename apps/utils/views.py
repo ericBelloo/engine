@@ -1,6 +1,6 @@
 import pyexcel
 from django.http import HttpResponse
-from apps.utils.models_direction import State, City, CP, Colony
+from apps.utils.models_direction import State, City, Colony
 from engine import settings
 
 
@@ -84,7 +84,3 @@ def process_colony(request):
             count_created += 1
     return HttpResponse('Se crearon: %s' % count_created)
 
-
-def remove_cp(request):
-    CP.objects.all().delete()
-    return HttpResponse('Borrado correcto')

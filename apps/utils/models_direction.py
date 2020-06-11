@@ -3,12 +3,6 @@ from django.db import models
 from apps.utils.models import BaseNameModel
 
 
-class CP(models.Model):
-    cp = models.CharField(max_length=5, primary_key=True)
-    create_at = models.DateField(auto_now=True)
-    update_at = models.DateField(auto_now=True)
-
-
 class State(BaseNameModel):
     """ Estate """
 
