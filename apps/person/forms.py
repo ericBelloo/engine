@@ -2,7 +2,7 @@
 from django import forms
 from django.contrib.auth.models import User
 
-from apps.person.models import Person, Document
+from apps.person.models import Person, Document, PetitionNDA
 
 
 class UserLoginForm(forms.ModelForm):
@@ -121,3 +121,22 @@ class PersonDocumentForm(forms.ModelForm):
             'ine': '',
             'power_letter': ''
         }
+
+
+class PersonPetitionNDAForm(forms.ModelForm):
+    cmg = forms.CharField(widget=forms.FileInput(
+        attrs={'class': 'custom-file-input', 'accept': 'application/pdf'}), required=False)
+    dgj = forms.CharField(widget=forms.FileInput(
+        attrs={'class': 'custom-file-input', 'accept': 'application/pdf'}), required=False)
+    gnp = forms.CharField(widget=forms.FileInput(
+        attrs={'class': 'custom-file-input', 'accept': 'application/pdf'}), required=False)
+    dgq = forms.CharField(widget=forms.FileInput(
+        attrs={'class': 'custom-file-input', 'accept': 'application/pdf'}), required=False)
+    tmg = forms.CharField(widget=forms.FileInput(
+        attrs={'class': 'custom-file-input', 'accept': 'application/pdf'}), required=False)
+    ngm = forms.CharField(widget=forms.FileInput(
+        attrs={'class': 'custom-file-input', 'accept': 'application/pdf'}), required=False)
+
+    class Meta:
+        model = PetitionNDA
+        fields = ('petition_type', 'file', 'person')

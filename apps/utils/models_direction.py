@@ -22,4 +22,4 @@ class Address(models.Model):
     street_a = models.CharField(max_length=100)  # calle
     street_b = models.CharField(max_length=100, null=True, blank=True)  # colonia
     number = models.CharField(max_length=3, null=True, blank=True)
-    colony = models.CharField(max_length=5)  # colonia
+    colony = models.CharField(max_length=5, null=True, blank=True)  # colonia

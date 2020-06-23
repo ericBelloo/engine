@@ -1,0 +1,103 @@
+
+{% extends 'base.html' %}
+
+{% block section %}
+    <section>
+        <div class="container-fluid fill-height">
+            <div class="row justify-content-center align-items-center fill-height">
+                <div class="col-xs-12 col-sm-10 col-md-5 col-lg-5 box mb-3">
+                    <div class="row form-row">
+                        <div class="col-12">
+                            <p class="pfl-data pfl-data-user mt-3 mb-3">Seleccione el formatdo que desee descargar</p>
+                        </div>
+                        <div class="col-4">
+                            <div class="pfl-petition">
+                                <a href="#">CMG</a>
+                                <span class="description mt-2">Estado de México</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="pfl-petition">
+                                <a href="#">DGJ</a>
+                                <span class="description mt-2">Guadalajara</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="pfl-petition">
+                                <a href="#">GNP</a>
+                                <span class="description mt-2">Tampico</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="pfl-petition">
+                                <a href="">DGQ</a>
+                                <span class="description mt-2">Querétaro</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="pfl-petition">
+                                <a href="#">TMG</a>
+                                <span class="description mt-2">Matamoros</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="pfl-petition">
+                                <a href="#">NGM</a>
+                                <span class="description mt-2">Puebla</span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p class="pfl-data pfl-data-user mt-3 mb-3">Seleccione los archivos que desea enviar</p>
+                        </div>
+                    </div>
+                    <form method="post" enctype="multipart/form-data"> {% csrf_token %}
+                        <div class="row form-row">
+                            <div class="col-6 mb-3">
+                                <div class="custom-file mt-1">
+                                    {{ form.cmg }}
+                                    <label class="custom-file-label" for="id_cmg" data-browse="Subir">CMG</label>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="custom-file mt-1">
+                                    {{ form.dgj }}
+                                    <label class="custom-file-label" for="id_dgj" data-browse="Subir">DGJ</label>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="custom-file mt-1">
+                                    {{ form.gnp }}
+                                    <label class="custom-file-label" for="id_gnp" data-browse="Subir">GNP</label>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="custom-file mt-1">
+                                    {{ form.dgq }}
+                                    <label class="custom-file-label" for="id_dgq" data-browse="Subir">DGQ</label>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="custom-file mt-1">
+                                    {{ form.tmg }}
+                                    <label class="custom-file-label" for="id_tmg" data-browse="Subir">TMG</label>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="custom-file mt-1">
+                                    {{ form.ngm }}
+                                    <label class="custom-file-label" for="id_ngm" data-browse="Subir">NGM</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn-second mt-2 mb-3" id="btn_back_home">Regresar</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn-send mt-2 mb-3">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

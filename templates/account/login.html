@@ -2,28 +2,28 @@
 {% extends 'base.html' %}
 
 {% block section %}
-    <section class="section-login">
-        <div class="container-fluid">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-xs-12 col-sm-10 col-md-5 col-lg-4 ">
-                    <h1 class="text-center">Login</h1>
+    <section>
+        <div class="container-fluid fill-height">
+            <div class="row justify-content-center align-items-center fill-height">
+                <div class="col-xs-12 col-sm-10 col-md-5 col-lg-3 box">
+                    <h1 class="text-center">Iniciar Sesion</h1>
                     <form class="valid-form mt-3" method="POST">
                     {% csrf_token %}
                       <div class="row form-row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-3">
+                        <div class="col-12 mb-3">
                           {{ form.username }}
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-3">
+                        <div class="col-12 mb-3">
                           {{ form.password }}
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mb-3">
-                          <button type="submit" class="btn-send val-sub">Enviar</button>
+                          <button type="submit" class="btn-send btn-valid-form">Enviar</button>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mb-3">
                           <button type="button" class="btn-sign-up">Crear Cuenta</button>
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-3 text-center">
+                      <div class="col-12 mb-3 text-center">
                         <a class="reference" href="#">Olvide mi contraseña</a>
                       </div>
                     </form>
