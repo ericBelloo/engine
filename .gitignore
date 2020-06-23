@@ -4,7 +4,8 @@
 *.pot
 *.pyc
 __pycache__
-media
+**/migrations/
+
 upload/company/bank_account/
 upload/company/constitutive_act/
 upload/company/employer_registration/
