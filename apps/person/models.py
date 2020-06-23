@@ -11,7 +11,7 @@ class Document(models.Model):
 class Person(models.Model):
     telephone_number = models.CharField(max_length=12, null=True, blank=True)
     phone_number = models.CharField(max_length=10)
-    rfc = models.CharField(max_length=12)
+    rfc = models.CharField(max_length=13)
     document = models.ForeignKey(Document, blank=True, null=True, on_delete=models.SET_NULL)
     company = models.ForeignKey(Company, null=True, blank=True, on_delete=models.SET_NULL)
     user = models.OneToOneField(User, on_delete=models.SET_NULL, null=True)
